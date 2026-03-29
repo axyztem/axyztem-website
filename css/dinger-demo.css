@@ -1,0 +1,27 @@
+.ticket-list ul li {
+  padding: 8px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+}
+
+/* Slide in from right */
+li.slide-in {
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Fade out when removed */
+li.fade-out {
+  opacity: 0;
+  transform: translateX(-100%);
+}

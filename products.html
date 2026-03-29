@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Axyztem</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Axyztem</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/axyztem-logo.png" alt="Axyztem Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <img src="images/axyztem-logo.png" alt="Axyztem Logo" class="logo">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="products">
-        <h1>Our Products</h1>
-        <p>Explore the range of Axyztem innovations designed to empower businesses.</p>
+  <main>
+    <h1>Dinger Paging Demo</h1>
 
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="images/placeholder1.jpg" alt="Dinger">
-                <h3>Dinger</h3>
-                <p>Smart restaurant pager system to reduce queues and improve customer satisfaction.</p>
-                <a href="dinger.html" class="btn">Learn More</a>
-            </div>
-            <div class="product-card">
-                <img src="images/placeholder2.jpg" alt="Future Product">
-                <h3>Future Product</h3>
-                <p>Upcoming innovation across industries like construction, logistics, and services.</p>
-                <a href="#" class="btn">Learn More</a>
-            </div>
-        </div>
+    <section class="ticket-demo">
+      <div class="ticket-list">
+        <h2>PREPARING</h2>
+        <ul id="preparing"></ul>
+      </div>
+
+      <div class="ticket-list">
+        <h2>READY</h2>
+        <ul id="ready"></ul>
+      </div>
+
+      <div class="ticket-list">
+        <h2>COMPLETED</h2>
+        <ul id="completed"></ul>
+      </div>
+
+      <div class="controls">
+        <input type="text" id="ticketInput" placeholder="Enter ticket number">
+        <button onclick="addTicket()">Add Ticket</button>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2026 Axyztem. All rights reserved.</p>
-        <p>Email: info@axyztem.es | Phone: +34 600 000 000</p>
-    </footer>
+  <footer>
+    <p>&copy; 2026 Axyztem. All rights reserved.</p>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
