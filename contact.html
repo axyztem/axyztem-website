@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Axyztem</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Axyztem</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="images/axyztem-logo.png" alt="Axyztem Logo" class="logo">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <img src="images/axyztem-logo.png" alt="Axyztem Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" required>
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you. Reach out for questions, demos, or partnership opportunities.</p>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name"><br><br>
 
-      <label for="message">Message:</label>
-      <textarea id="message" rows="5" required></textarea>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="you@example.com"><br><br>
 
-      <button type="submit">Send</button>
-    </form>
-  </main>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea><br><br>
 
-  <footer>
-    <p>&copy; 2026 Axyztem. All rights reserved.</p>
-  </footer>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Axyztem. All rights reserved.</p>
+        <p>Email: info@axyztem.es | Phone: +34 600 000 000</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
