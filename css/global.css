@@ -57,3 +57,23 @@ padding:15px;
 margin-top:40px;
 font-size:14px;
 }
+
+
+
+.Axyztem-Logo {
+  width: 150px; /* default for desktop */
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .Axyztem-Logo {
+    width: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .Axyztem-Logo {
+    width: 90px;
+  }
+}

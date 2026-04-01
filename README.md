@@ -2,7 +2,7 @@
 ### Zero-Hardware Restaurant Order Display Platform
 
 **Powered by:** https://axyztem.es  
-**Product:** Axyz Display System  
+**Product:** Axyz Display System "Beyond Tradition"  
 **Version:** V1 (Static MVP)  
 
 ---
@@ -15,7 +15,7 @@ The system runs entirely from a website and can be deployed globally using **Git
 
 Restaurants only need:
 
-- a tablet, TV, or browser screen
+- a phone, a tablet, and a TV or browser screen
 - internet connection
 - modern web browser
 
@@ -42,7 +42,7 @@ The system provides a real-time visual workflow:
 | Waiter Dashboard | Marks food as READY |
 | Display Dashboard | Public screen showing PREPARING & READY lists |
 
-> Customer dashboard and phone paging are future features.
+> Customer dashboard, Supervisor Dashboard, Owner Dashboard and phone paging are future features.
 
 ---
 
