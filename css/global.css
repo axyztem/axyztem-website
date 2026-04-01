@@ -58,22 +58,38 @@ margin-top:40px;
 font-size:14px;
 }
 
-
-
-.Axyztem-Logo {
-  width: 150px; /* default for desktop */
+/* Responsive Logo */
+.logo {
+  width: 180px;     /* desktop size */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
 }
 
 /* Tablet */
 @media (max-width: 992px) {
-  .Axyztem-Logo {
-    width: 120px;
+  .logo {
+    width: 140px;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-  .Axyztem-Logo {
-    width: 90px;
+  .logo {
+    width: 110px;
   }
 }
+
+/* Improve header layout */
+.site-header {
+  background: #0a58ca;
+  color: white;
+  padding: 25px 10px;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
