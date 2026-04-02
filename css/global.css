@@ -147,12 +147,12 @@ footer {
 
   /* Title + tagline centered below logo */
   .site-title {
-    font-size: 20px;  /* stays larger than tagline */
+    font-size: 25px;  /* stays larger than tagline */
     white-space: nowrap;
   }
 
   .tagline {
-    font-size: 12px;  /* smaller, clean, no wrapping */
+    font-size: 20px;  /* smaller, clean, no wrapping */
     white-space: nowrap;
   }
 }
