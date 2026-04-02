@@ -29,7 +29,7 @@ body{
 }
 
 .logo {
-  width: 130px;
+  width: 250px;
   height: auto;
 }
 
@@ -89,4 +89,70 @@ nav a {
 .cta {
   background: #0A3D62;
   color: white;
-  padding
+  padding: 14px 24px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+   =========================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .logo {
+    width: 110px;
+  }
+  .site-title {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  /* Stack everything vertically */
+  .site-header {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  /* Logo centered on top */
+  .header-left {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Title + tagline centered below logo */
+  .site-title {
+    font-size: 20px;  /* stays larger than tagline */
+    white-space: nowrap;
+  }
+
+  .tagline {
+    font-size: 12px;  /* smaller, clean, no wrapping */
+    white-space: nowrap;
+  }
+}
