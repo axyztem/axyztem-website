@@ -1,102 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Axyz Display System | Restaurant Order Display Software</title>
-
-  <meta name="description"
-content="Axyz Display System is a modern restaurant order display solution replacing traditional pager systems. Simple, fast, zero hardware installation.">
-
-  <meta name="keywords"
-content="restaurant display system, kitchen display system, order screen restaurant, restaurant queue display, food order display software">
-
-  <meta name="robots" content="index, follow">
-
-  <link rel="canonical" href="https://axyztem.es/">
-
-  <link rel="stylesheet" href="css/global.css">
-
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Axyz Display System">
-  <meta property="og:description" content="Modern restaurant order display system without hardware pagers.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://axyztem.es">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-  {
-  "@context":"https://schema.org",
-  "@type":"SoftwareApplication",
-  "name":"Axyz Display System",
-  "applicationCategory":"BusinessApplication",
-  "operatingSystem":"Web",
-  "description":"Restaurant order display system replacing pager hardware.",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}
-  }
-  </script>
-
+<meta charset="UTF-8">
+<title>Axyztem | Sustainable Business Innovation</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="header-left">
-    <img src="images/axyztem-logo.png" alt="Axyztem Logo" class="logo">
-  </div>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo fade-up">
+        <a href="../index.html">
+          <img src="../images/axyztem-logo.png" alt="Axyztem Logo" style="height:50px;">
+        </a>
+      </div>
 
-  <div class="header-text">
-    <h1 class="site-title">AXYZ DISPLAY SYSTEM</h1>
-    <p class="tagline">Beyond Tradition</p>
+      <div class="nav-links fade-up">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
   </div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="product.html">Product</a>
-  <a href="clients.html">Clients</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
 <section class="hero">
-  <h1>Replace Restaurant Pagers with a Smart Display</h1>
+  <div class="hero-text fade-up">
+    <h1>Sustainable Business Innovation Through Reliable Software</h1>
+    <p>We build modern SaaS platforms that enhance operational efficiency and long‑term sustainability for forward‑thinking organizations.</p>
+    <a class="btn fade-up" href="projects.html">Explore Projects</a>
+  </div>
 
-  <p>
-    Axyz Display System is a lightweight web-based order display solution
-designed for restaurants, fast food shops, and cafés.
-  </p>
-
-  <a class="cta" href="product.html">See How It Works</a>
+  <div class="hero-img fade-up parallax">
+    <img src="images/hero.jpg" alt="CEO & Architect in Axyztem Office" width="500">
+  </div>
 </section>
 
-<div class="container">
-
-  <h2>Why Restaurants Choose Axyz Display System</h2>
-
-  <ul>
-    <li>No hardware installation</li>
-    <li>Runs on any TV or tablet</li>
-    <li>Real-time PREPARING & READY display</li>
-    <li>Zero maintenance infrastructure</li>
-    <li>SEO-ready restaurant display pages</li>
-  </ul>
-
-  <h2>Dedicated Product Focus</h2>
-
-  <p>
-    Axyztem is fully dedicated to developing and improving the
-<strong>Axyz Display System</strong>.
-    Upcoming projects are Dinger Paging System and My-edoc Construction Software.
-  </p>
+<section class="section gray">
+<div class="container fade-up">
+  <h2>Our Focus</h2>
+  <p>We design resilient, scalable, and practical SaaS systems engineered for real‑world performance.</p>
 </div>
+</section>
 
-<footer>
-  Axyz Display System "Beyond Tradition" - Powered by axyztem.es
+<section class="cta fade-up">
+  <h2>Discover Our Software Solutions</h2>
+  <a class="btn" href="projects.html">View Projects</a>
+</section>
+
+<footer class="fade-up">
+  <p>© Axyztem — Sustainable Business Innovation</p>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+const animatedElements=document.querySelectorAll('.fade-up');
+function animateOnScroll(){
+  animatedElements.forEach(el=>{
+    const rect=el.getBoundingClientRect();
+    if(rect.top<window.innerHeight-80){ el.classList.add('visible'); }
+  });
+}
+window.addEventListener('scroll',animateOnScroll);
+window.addEventListener('load',animateOnScroll);
+
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('.parallax').forEach(el=>{
+    el.style.transform=`translateY(${window.scrollY * 0.1}px)`;
+  });
+});
+</script>
+
 </body>
 </html>

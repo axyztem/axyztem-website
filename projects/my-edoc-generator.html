@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My‑Edoc Generator | Axyztem</title>
+<meta name="description" content="My‑Edoc Generator — an intelligent platform for generating construction, safety, and contractual documentation.">
+<link rel="stylesheet" href="../css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo fade-up">
+        <a href="../index.html">
+          <img src="../images/axyztem-logo.png" alt="Axyztem Logo" style="height:50px;">
+        </a>
+      </div>
+
+      <div class="nav-links fade-up">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text fade-up">
+    <h1>My‑Edoc Generator</h1>
+    <p>An intelligent documentation platform designed to simplify the creation of professional construction, safety, and contractual documents through guided automation.</p>
+  </div>
+
+  <div class="hero-img fade-up parallax">
+    <img src="../images/construction.jpg" alt="My‑Edoc Generator" width="500">
+  </div>
+</section>
+
+<!-- PURPOSE -->
+<section class="section gray">
+<div class="container">
+  <h2 class="fade-up">Documentation Without Complexity</h2>
+  <p class="fade-up">
+    Professionals often spend excessive time preparing repetitive technical documentation.  
+    My‑Edoc Generator streamlines document preparation while maintaining professional standards and compliance requirements.
+  </p>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+<div class="container">
+  <h2 class="fade-up">Key Capabilities</h2>
+
+  <div class="grid">
+
+    <div class="card fade-up">
+      <h3>Construction Documentation</h3>
+      <p>Generate structured technical documents such as method statements and project documentation efficiently.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Safety Documentation</h3>
+      <p>Create safety procedures, risk documentation, and compliance‑ready files aligned with project needs.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Contracts & Requirements</h3>
+      <p>Produce professional agreements and requirement documents using guided workflows.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>AI‑Assisted Drafting</h3>
+      <p>Reduce manual writing while maintaining professional formatting and clarity.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Professional Consistency</h3>
+      <p>Standardized outputs help organizations maintain documentation quality across projects.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Time Efficiency</h3>
+      <p>Transform hours of preparation into streamlined workflows.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:40px;">
+    <p><strong>My‑Edoc Generator is an upcoming Axyztem project.</strong></p>
+    <br>
+    <a class="btn" href="../contact.html">Request Early Information</a>
+  </div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta fade-up">
+  <h2>Reimagining Professional Documentation</h2>
+  <a class="btn" href="../contact.html">Contact Axyztem</a>
+</section>
+
+<footer class="fade-up">
+  <p>© Axyztem — Sustainable Business Innovation</p>
+</footer>
+
+<!-- ANIMATIONS + PARALLAX -->
+<script>
+const animatedElements = document.querySelectorAll('.fade-up');
+
+function animateOnScroll(){
+  animatedElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 80){
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+
+window.addEventListener('scroll', ()=>{
+  document.querySelectorAll('.parallax').forEach(el=>{
+    el.style.transform = `translateY(${window.scrollY * 0.1}px)`;
+  });
+});
+</script>
+
+</body>
+</html>

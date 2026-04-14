@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://axyztem.es/</loc>
-</url>
-
-<url>
-<loc>https://axyztem.es/product.html</loc>
-</url>
-
-<url>
-<loc>https://axyztem.es/about.html</loc>
-</url>
-
-<url>
-<loc>https://axyztem.es/contact.html</loc>
-</url>
-
+<url><loc>https://axyztem.es/</loc></url>
+<url><loc>https://axyztem.es/about.html</loc></url>
+<url><loc>https://axyztem.es/projects.html</loc></url>
+<url><loc>https://axyztem.es/projects/axyz-order-system.html</loc></url>
+<url><loc>https://axyztem.es/projects/conzeus-place.html</loc></url>
+<url><loc>https://axyztem.es/projects/my-edoc-generator.html</loc></url>
 </urlset>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Conzeus Place | Axyztem</title>
+<meta name="description" content="Conzeus Place — a digital ecosystem connecting tourists, locals, businesses, and jobseekers across Spain.">
+<link rel="stylesheet" href="../css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo fade-up">
+        <a href="../index.html">
+          <img src="../images/axyztem-logo.png" alt="Axyztem Logo" style="height:50px;">
+        </a>
+      </div>
+
+      <div class="nav-links fade-up">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text fade-up">
+    <h1>Conzeus Place</h1>
+    <p>A digital ecosystem designed to help tourists, locals, businesses, and jobseekers discover opportunities, experiences, and connections across Spain.</p>
+  </div>
+
+  <div class="hero-img fade-up parallax">
+    <img src="../images/conzeusplace.jpg" alt="Conzeus Place" width="500">
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section gray">
+<div class="container">
+  <h2 class="fade-up">A Digital Ecosystem for Modern Spain</h2>
+  <p class="fade-up">
+    Conzeus Place unifies local discovery, tourism intelligence, business opportunity awareness, and career growth guidance into one intelligent platform tailored for Spain’s dynamic environment.
+  </p>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+<div class="container">
+  <h2 class="fade-up">Who It Serves</h2>
+
+  <div class="grid">
+
+    <div class="card fade-up">
+      <h3>Tourists</h3>
+      <p>Discover authentic Spanish experiences — local cuisine, attractions, hidden destinations, and transportation options.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Locals</h3>
+      <p>Explore new places, services, events, and lifestyle opportunities within your region.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Business Owners & Investors</h3>
+      <p>Identify opportunities, supply sources, commercial locations, and investment insights across Spain.</p>
+    </div>
+
+    <div class="card fade-up">
+      <h3>Jobseekers</h3>
+      <p>Access career opportunities, understand job markets, and discover pathways into new industries.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:40px;">
+    <p><strong>Conzeus Place is currently under development.</strong></p>
+    <br>
+    <a class="btn" href="../contact.html">Request Updates</a>
+  </div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta fade-up">
+  <h2>Discover Spain Through Intelligence</h2>
+  <a class="btn" href="../contact.html">Contact Axyztem</a>
+</section>
+
+<footer class="fade-up">
+  <p>© Axyztem — Sustainable Business Innovation</p>
+</footer>
+
+<!-- ANIMATIONS + PARALLAX -->
+<script>
+const animatedElements = document.querySelectorAll('.fade-up');
+
+function animateOnScroll(){
+  animatedElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 80){
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+
+window.addEventListener('scroll', ()=>{
+  document.querySelectorAll('.parallax').forEach(el=>{
+    el.style.transform = `translateY(${window.scrollY * 0.1}px)`;
+  });
+});
+</script>
+
+</body>
+</html>

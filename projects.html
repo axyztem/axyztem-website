@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects | Axyztem</title>
+<meta name="description" content="Explore Axyztem's innovative SaaS projects including AOS, Conzeus Place, and My‑Edoc Generator.">
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* FIX: Ensure project images scale properly on mobile */
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* FIX: Improve mobile spacing */
+@media(max-width:768px){
+  .grid {
+    gap: 20px;
+  }
+  .hero {
+    padding: 60px 20px;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+  .hero-text p {
+    font-size: 17px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+    <nav>
+      <div class="logo fade-up">
+        <a href="../index.html">
+          <img src="images/axyztem-logo.png" alt="Axyztem Logo" style="height:50px;">
+        </a>
+      </div>
+
+      <div class="nav-links fade-up">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text fade-up">
+    <h1>Our Projects</h1>
+    <p>Explore the innovative SaaS platforms we are building to enhance operational efficiency and sustainability.</p>
+  </div>
+</section>
+
+<!-- PROJECT GRID -->
+<section class="section gray">
+<div class="container">
+<div class="grid">
+
+  <!-- PROJECT 1 -->
+  <div class="card fade-up">
+    <img src="images/aos.jpg" alt="Axyz Order System">
+    <h3>Axyz Order System</h3>
+    <p>Locally resilient workflow order platform for high‑volume service environments.</p>
+    <a class="btn" href="projects/axyz-order-system.html">Learn More →</a>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="card fade-up">
+    <img src="images/conzeusplace.jpg" alt="Conzeus Place">
+    <h3>Conzeus Place</h3>
+    <p>Digital ecosystem connecting tourists, locals, businesses, and job‑seekers across Spain.</p>
+    <a class="btn" href="projects/conzeus-place.html">Learn More →</a>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="card fade-up">
+    <img src="images/construction.jpg" alt="My‑Edoc Generator">
+    <h3>My‑Edoc Generator</h3>
+    <p>Automated document generation platform for construction documentation.</p>
+    <a class="btn" href="projects/my-edoc-generator.html">Learn More →</a>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta fade-up">
+  <h2>Discover How Our Solutions Transform Operations</h2>
+  <a class="btn" href="index.html">Back to Home</a>
+</section>
+
+<footer class="fade-up">
+  <p>© Axyztem — Sustainable Business Innovation</p>
+</footer>
+
+<!-- ANIMATIONS -->
+<script>
+const animatedElements = document.querySelectorAll('.fade-up');
+
+function animateOnScroll(){
+  animatedElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 80){
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+</script>
+
+</body>
+</html>

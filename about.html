@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Axyztem</title>
-    <link rel="stylesheet" href="css/global.css">
+<meta charset="UTF-8">
+<title>About Axyztem</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
- <header class="site-header">
-  <div class="header-left">
-    <img src="images/axyztem-logo.png" alt="Axyztem Logo" class="logo">
-  </div>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo fade-up">
+        <a href="../index.html">
+          <img src="images/axyztem-logo.png" alt="Axyztem Logo" style="height:50px;">
+        </a>
+      </div>
 
-  <div class="header-text">
-    <h1 class="site-title">AXYZ DISPLAY SYSTEM</h1>
-    <p class="tagline">Beyond Tradition</p>
+      <div class="nav-links fade-up">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
   </div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="product.html">Product</a>
-  <a href="clients.html">Clients</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<section class="hero">
+  <div class="hero-text fade-up">
+    <h1>About Axyztem</h1>
+    <p>Axyztem builds reliable and functional SaaS platforms that modernize traditional business operations. We focus on creating software that is practical, scalable, and sustainable.</p>
+  </div>
+  <div class="hero-img fade-up parallax">
+    <img src="images/hero.png" alt="Axyztem Office" width="500">
+  </div>
+</section>
 
+<section class="section gray">
+<div class="container">
+  <h2 class="fade-up">Our Mission</h2>
+  <p class="fade-up">To empower businesses with resilient, efficient, and future‑ready software solutions.</p>
 
+  <h2 class="fade-up">Our Vision</h2>
+  <p class="fade-up">To become a global leader in SaaS innovation by delivering software that blends efficiency, reliability, and long‑term scalability.</p>
 
-<!-- 
-    <header>
-        <img src="images/axyztem-logo.png" alt="Axyztem Logo">                                                                            Axyz Display System</header>
+  <h2 class="fade-up">Core Values</h2>
+  <ul class="fade-up">
+    <li><strong>Reliability:</strong> Software engineered for stability.</li>
+    <li><strong>Innovation:</strong> Modern solutions beyond traditional systems.</li>
+    <li><strong>Sustainability:</strong> Built for long‑term efficiency.</li>
+    <li><strong>Customer Focus:</strong> Designed around real workflows.</li>
+  </ul>
+</div>
+</section>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="product.html">Product</a>
-            <a href="clients.html">Clients</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
--->
+<section class="cta fade-up">
+  <h2>Explore Our Projects</h2>
+  <a class="btn" href="projects.html">View Projects</a>
+</section>
 
+<footer class="fade-up">
+  <p>© Axyztem — Sustainable Business Innovation</p>
+</footer>
 
-    <section class="about">
-        <h1>About Axyztem</h1>
-        <p>Axyztem is a technology company dedicated to delivering sustainable business innovations. We develop solutions that improve operational efficiency, customer experience, and overall productivity across multiple industries, including restaurants, construction, and logistics.</p>
+<script>
+const animatedElements=document.querySelectorAll('.fade-up');
+function animateOnScroll(){
+  animatedElements.forEach(el=>{
+    const rect=el.getBoundingClientRect();
+    if(rect.top<window.innerHeight-80){ el.classList.add('visible'); }
+  });
+}
+window.addEventListener('scroll',animateOnScroll);
+window.addEventListener('load',animateOnScroll);
 
-        <h2>Our Mission</h2>
-        <p>To empower businesses with innovative, scalable, and sustainable solutions that make daily operations smarter, faster, and more reliable.</p>
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('.parallax').forEach(el=>{
+    el.style.transform=`translateY(${window.scrollY * 0.1}px)`;
+  });
+});
+</script>
 
-        <h2>Our Vision</h2>
-        <p>To be recognized globally as the go-to platform for digital solutions that combine technology, sustainability, and real business impact.</p>
-    </section>
-
-    <footer>
-        Axyz Display System "Beyond Tradition" - Powered by axyztem.es
-        <p>&copy; 2026 Axyztem. All rights reserved.</p>
-        <p>Email: info@axyztem.es | Phone: +34 600 000 000</p>
-    </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,57 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Axyztem</title>
-    <link rel="stylesheet" href="css/global.css">
+<meta charset="UTF-8">
+<title>Contact Axyztem | Sustainable Business Innovation</title>
+<meta name="description" content="Get in touch with Axyztem for SaaS solutions and project inquiries.">
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
 
- <header class="site-header">
-  <div class="header-left">
-    <img src="images/axyztem-logo.png" alt="Axyztem Logo" class="logo">
-  </div>
+<header>
+    <div class="container">
+    <nav>
+      <div class="logo fade-up">
+        <a href="../index.html">
+          <img src="images/axyztem-logo.png" alt="Axyztem Logo" style="height:50px;">
+        </a>
+      </div>
 
-  <div class="header-text">
-    <h1 class="site-title">AXYZ DISPLAY SYSTEM</h1>
-    <p class="tagline">Beyond Tradition</p>
+      <div class="nav-links fade-up">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
   </div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="product.html">Product</a>
-  <a href="clients.html">Clients</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text fade-up">
+    <h1>Contact Axyztem</h1>
+    <p>We’d love to hear from you. Whether you're exploring SaaS solutions, seeking partnerships, or have project inquiries — our team is ready to connect.</p>
+  </div>
 
+  <div class="hero-img fade-up parallax">
+    <img src="images/herocontact.png" alt="CEO with Open Arms" width="500">
+  </div>
+</section>
 
-    <section class="contact">
-        <h1>Contact Us</h1>
-        <p>We’d love to hear from you. Reach out for questions, demos, or partnership opportunities.</p>
+<!-- CONTACT FORM SECTION -->
+<section class="section gray">
+<div class="container fade-up">
 
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Your name"><br><br>
+  <h2>Get in Touch</h2>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="you@example.com"><br><br>
+  <form id="contactForm" style="margin-top:25px; max-width:700px;">
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea><br><br>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required
+      style="width:100%; padding:14px; margin-bottom:20px; border-radius:10px; border:1px solid #ccc;">
 
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required
+      style="width:100%; padding:14px; margin-bottom:20px; border-radius:10px; border:1px solid #ccc;">
 
-    <footer>
-        Axyz Display System "Beyond Tradition" - Powered by axyztem.es
-        <p>&copy; 2026 Axyztem. All rights reserved.</p>
-        <p>Email: info@axyztem.es | Phone: +34 600 000 000</p>
-    </footer>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required
+      style="width:100%; padding:14px; margin-bottom:20px; border-radius:10px; border:1px solid #ccc;"></textarea>
 
-    <script src="js/main.js"></script>
+    <!-- Honeypot -->
+    <div style="display:none;">
+      <label>Leave this empty</label>
+      <input type="text" name="company">
+    </div>
+
+    <!-- reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6Lfje6ksAAAAAOugp3R9DYBhBkrUJjKx2nFVOQUM"></div>
+
+    <br>
+    <button type="submit" class="btn">Send Message</button>
+
+    <p id="status" style="margin-top:15px; font-weight:600;"></p>
+
+  </form>
+
+</div>
+</section>
+
+<footer class="fade-up">
+  <p>© Axyztem — Sustainable Business Innovation</p>
+</footer>
+
+<!-- CONTACT FORM SCRIPT -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  const status = document.getElementById('status');
+  status.textContent = "Sending...";
+
+  const formData = new FormData(this);
+
+  // Honeypot
+  if(formData.get("company")){
+    status.textContent = "Spam detected.";
+    return;
+  }
+
+  // reCAPTCHA
+  const captcha = grecaptcha.getResponse();
+  if(!captcha){
+    status.textContent = "Please verify you are human.";
+    return;
+  }
+
+  formData.append("captcha", captcha);
+
+  try {
+    const res = await fetch('/send-email', {
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(formData)),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if(res.ok){
+      status.textContent = "Message sent successfully!";
+      this.reset();
+      grecaptcha.reset();
+    } else {
+      status.textContent = "Error sending message. Please try again.";
+    }
+
+  } catch (err) {
+    status.textContent = "Network error. Please try again.";
+  }
+});
+</script>
+
+<!-- ANIMATIONS + PARALLAX -->
+<script>
+const animatedElements = document.querySelectorAll('.fade-up');
+
+function animateOnScroll(){
+  animatedElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 80){
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+
+window.addEventListener('scroll', ()=>{
+  document.querySelectorAll('.parallax').forEach(el=>{
+    el.style.transform = `translateY(${window.scrollY * 0.1}px)`;
+  });
+});
+</script>
+
 </body>
 </html>
